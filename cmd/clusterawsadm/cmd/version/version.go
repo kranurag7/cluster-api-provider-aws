@@ -33,6 +33,9 @@ type Version struct {
 	ClientVersion *version.Info `json:"awsProviderVersion"`
 }
 
+// defaults to clusterawsadm
+var CLIName string = "clusterawsadm"
+
 // Cmd provides the version information clusterawsadm.
 func Cmd(out io.Writer) *cobra.Command {
 	cmd := &cobra.Command{
@@ -63,7 +66,7 @@ func RunVersion(out io.Writer, cmd *cobra.Command) error {
 
 	switch of {
 	case "":
-		fmt.Fprintf(out, "clusterctl-aws version: %#v\n", v.ClientVersion)
+		fmt.Fprintf(out, "%s version: %#v\n", CLIName, v.ClientVersion)
 	case "short":
 		fmt.Fprintf(out, "%s\n", v.ClientVersion.GitVersion)
 	case "yaml":
