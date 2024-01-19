@@ -3,7 +3,7 @@ name: release
 on:
   push:
     tags:
-    - 'release-**'
+    - 'v*'
 
 permissions:
   contents: write # required to write to github release.
