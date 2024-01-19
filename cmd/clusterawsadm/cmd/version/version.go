@@ -63,7 +63,7 @@ func RunVersion(out io.Writer, cmd *cobra.Command) error {
 
 	switch of {
 	case "":
-		fmt.Fprintf(out, "clusterawsadm version: %#v\n", v.ClientVersion)
+		fmt.Fprintf(out, "clusterctl-aws version: %#v\n", v.ClientVersion)
 	case "short":
 		fmt.Fprintf(out, "%s\n", v.ClientVersion.GitVersion)
 	case "yaml":
