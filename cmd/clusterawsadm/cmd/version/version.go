@@ -34,7 +34,7 @@ type Version struct {
 	ClientVersion *version.Info `json:"awsProviderVersion"`
 }
 
-// defaults to clusterawsadm
+// CLIName defaults to clusterawsadm.
 var CLIName string = "clusterawsadm"
 
 // Cmd provides the version information clusterawsadm.
